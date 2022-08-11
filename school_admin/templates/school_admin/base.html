@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <img src="{% static '/images/adminn.png'%}" alt="image" align="left" width="25%">
+    <h5 align="right">login as: admin</h5>
+    <hr>
+    <!-- <p>
+        <h2>view students</h2>
+        <h2>view teacher</h2>
+        <h2>log out</h2>
+    </p> -->
+    <p align="right">
+    
+   
+        <label for=""><b><a href="{% url 'home' %}">home</a> </b> </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+       
+        <label for=""><b><a href="{% url 'student' %}">view student</a></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for=""><b><a href="{% url 'teacher' %}">view teachers</a></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for=""><b>log out</b></label>
+    </p>
+    {% block content %} {% endblock %}
+</body>
+</html>

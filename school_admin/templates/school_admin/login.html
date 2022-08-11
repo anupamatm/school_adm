@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+<br><br><br>
+<p align="right">
+    <label for=""><a href="{% url 'home'%}">admin</a></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label for=""><a href="{% url 'sthome' %}">student</a></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label for=""><a href="{% url 't_home' %}">teacher</a></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<br>
+    <table align="center" border="1px solid black">
+        <tr>
+            <td rowspan="">
+                <img src="{% static '/images/school_management_system.jpg'%}" alt="">
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td><label for="">user name</label></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit"></td>
+                    </tr>
+            </td>
+        </tr>
+        
+
+        </table>
+    </table>
+</body>
+
+</html>

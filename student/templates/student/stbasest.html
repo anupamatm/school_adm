@@ -1,0 +1,29 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <img src="{% static '/images/download.png'%}" alt="image" align="left" width="25%">
+    <h5 align="right">login as: student</h5>
+    <hr>
+    <br>
+    <!-- <p>
+        <h2>view students</h2>
+        <h2>view teacher</h2>
+        <h2>log out</h2>
+    </p> -->
+    <p align="right">
+        <label for=""><b><a href="{% url 'sthome' %}">home</a> </b> </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for=""><b><a href="{% url 'view_attendence' %}">view attendence</a></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for=""><b><a href="{% url 'view_marks' %}">view marks</a></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for=""><b>log out</b></label>
+        
+    </p>
+    {% block content %} {% endblock %}
+</body>
+</html>
